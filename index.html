@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP Nail Designer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff1493;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #ff1493;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        form {
+            margin-top: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff1493;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff69b4;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .button-group button {
+            padding: 10px 15px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KP NAIL DESIGNER</h1>
+    </header>
+
+    <nav>
+        <a href="#quem-somos">Quem Somos?</a>
+        <a href="#agendamentos">Agendamentos</a>
+        <a href="#calendario">Calendário</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="quem-somos">
+            <h2>Quem Somos?</h2>
+            <p>Bem-vindo à KP Nail Designer, onde cuidamos das suas unhas com arte, técnica e dedicação! Somos especialistas em criar designs únicos e personalizados, garantindo sempre um atendimento de qualidade e produtos de alta durabilidade. Nosso objetivo é proporcionar uma experiência relaxante e agradável, além de transformar suas unhas em verdadeiras obras de arte.</p>
+            <p>Com anos de experiência no mercado de beleza, nossa equipe está sempre antenada nas últimas tendências e técnicas. Seja para um look discreto ou extravagante, na KP Nail Designer você encontra o design perfeito para cada ocasião.</p>
+        </section>
+
+        <section id="agendamentos">
+            <h2>Agendamentos</h2>
+            <p>Escolha a data e o horário para fazer o seu agendamento:</p>
+
+            <form id="agendamento-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="data">Data do Agendamento:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="hora">Horário do Agendamento:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="mensagem">Mensagem (opcional):</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+                <button type="submit">Confirmar Agendamento</button>
+            </form>
+        </section>
+
+        <section id="calendario">
+            <h2>Calendário</h2>
+            <p>Veja os horários disponíveis e programe-se com antecedência.</p>
+            <div class="button-group">
+                <button onclick="alert('Horário de Manhã: 9h às 12h')">Manhã</button>
+                <button onclick="alert('Horário de Tarde: 12h às 18h')">Tarde</button>
+                <button onclick="alert('Horário de Noite: 18h às 22h')">Noite</button>
+            </div>
+        </section>
+
+        <section id="novidades">
+            <h2>Novidades</h2>
+            <p>Fique por dentro das últimas tendências e designs de unhas exclusivos.</p>
+            <button onclick="alert('Novidades de Outubro: Eu continuo sendo a melhor NAIL DE SP!')">Ver Novidades</button>
+        </section>
+
+        <section id="contato">
+            <h2>Informações de Contato</h2>
+            <p>Email: kpnaidesigner@gmail.com</p>
+            <p>Telefone: (11)99820-9696</p>
+            <p> Instagram: kp_nail_designer</p>
+            <p>Endereço: Rua Altamira do Paraná, 364 - Vila Jaguara, SP</p>
+            <button onclick="alert('Entraremos em contato o mais rápido possível!')">Enviar Contato</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 KP Nail Designer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('agendamento-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const data = document.getElementById('data').value;
+            const hora = document.getElementById('hora').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            alert(`Agendamento confirmado!\n\nNome: ${nome}\nEmail: ${email}\nData: ${data}\nHora: ${hora}\nMensagem: ${mensagem}`);
+        });
+    </script>
+
+</body>
+</html>
